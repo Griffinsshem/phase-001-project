@@ -96,6 +96,41 @@ button {
   border-radius: 8px;
 }
 
+.movie-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 150px 20px 70px 20px;
+  background-color: #f8f8f8;
+  color: #333;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.movie-detail img {
+  max-width: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.movie-detail .movie-info {
+  max-width: 600px;
+  flex: 1;
+}
+
+.movie-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.movie-detail p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
 footer {
   position: fixed;
   bottom: 0;

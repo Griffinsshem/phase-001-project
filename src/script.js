@@ -3,6 +3,8 @@ const BASE_URL = "https://yts.mx/api/v2";
 const searchInput = document.getElementById("search-movie");
 const searchButton = document.querySelector("button");
 const movieGrid = document.getElementById("movie-grid");
+const movieList = document.getElementById("movie-list");
+const addButton = document.getElementById("myAddBtn")
 
 
 searchButton.addEventListener("click", () => {
@@ -57,12 +59,15 @@ function showMovieDetails(movieId) {
       movieGrid.innerHTML = `
         <div class="movie-detail">
            <img src="${movie.large_cover_image}" alt="${movie.title}" />
-           <h2>${movie.title} (${movie.year})</h2>
-           <p><strong>Rating:</strong> ${movie.rating}</p>
-           <p><strong>Runtime:</strong> ${movie.runtime} minutes</p>
-           <p><strong>Genres:</strong> ${movie.genres.join(", ")}</p>
-           <p>${movie.description_full}</p>
-           <button onclick="window.location.reload()">Back to Search</button>
+           <div class="movie-info">
+            <h2>${movie.title} (${movie.year})</h2>
+            <p><strong>Rating:</strong> ${movie.rating}</p>
+            <p><strong>Runtime:</strong> ${movie.runtime} minutes</p>
+            <p><strong>Genres:</strong> ${movie.genres.join(", ")}</p>
+            <p>${movie.description_full}</p>
+            <button id="myAddBtn">Add to Watchlist</button>
+            <button onclick="window.location.reload()">Back to Search</button>
+           </div>
          </div>
        `;
     })
@@ -71,3 +76,7 @@ function showMovieDetails(movieId) {
       movieGrid.innerHTML = "<p>Could not load movie details.</p>";
     });
 }
+
+addButton.addEventListener("submit", () => {
+  su
+})
