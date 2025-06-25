@@ -129,7 +129,10 @@ button {
   line-height: 1.5;
 }
 
-
+#movie-list {
+  width: 800px;
+  margin: auto;
+}
 
 footer {
   position: fixed;
