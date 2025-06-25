@@ -5,10 +5,9 @@ const searchButton = document.querySelector("button");
 const movieGrid = document.getElementById("movie-grid");
 const movieList = document.getElementById("movie-list");
 
-// ✅ Load watchlist from localStorage or initialize empty
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
-// ✅ Search button click event
+
 searchButton.addEventListener("click", () => {
   const query = searchInput.value.trim();
   if (query !== "") {
@@ -16,7 +15,6 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-// ✅ Fetch movie search results
 function searchMovies(query) {
   fetch(`${BASE_URL}/list_movies.json?query_term=${encodeURIComponent(query)}`)
     .then((res) => res.json())
@@ -33,7 +31,7 @@ function searchMovies(query) {
     });
 }
 
-// ✅ Display search results
+
 function displayMovies(movies) {
   movieGrid.innerHTML = "";
 
@@ -54,7 +52,6 @@ function displayMovies(movies) {
   });
 }
 
-// ✅ Show single movie details
 function showMovieDetails(movieId) {
   fetch(`${BASE_URL}/movie_details.json?movie_id=${movieId}`)
     .then((res) => res.json())
@@ -81,7 +78,6 @@ function showMovieDetails(movieId) {
         </div>
       `;
 
-      // ✅ Add to Watchlist event
       const addBtn = document.getElementById("myAddBtn");
       addBtn.addEventListener("click", (e) => {
         const movieId = e.target.dataset.id;
@@ -95,7 +91,7 @@ function showMovieDetails(movieId) {
     });
 }
 
-// ✅ Add movie to watchlist
+
 function addToWatchlist(id, title) {
   if (watchlist.find(movie => movie.id === id)) {
     alert("Movie already in watchlist!");
@@ -107,7 +103,7 @@ function addToWatchlist(id, title) {
   renderWatchlist();
 }
 
-// ✅ Render the watchlist
+
 function renderWatchlist() {
   movieList.innerHTML = "";
 
@@ -115,24 +111,21 @@ function renderWatchlist() {
     const li = document.createElement("li");
     li.innerHTML = `
       <span>${movie.title}</span>
-      <button onclick="editWatchlist(${index})">Edit</button>
       <button onclick="deleteFromWatchlist(${index})">Delete</button>
     `;
     movieList.appendChild(li);
   });
 }
 
-// ✅ Edit movie in watchlist
-function editWatchlist(index) {
-  const newTitle = prompt("Enter new movie title:", watchlist[index].title);
-  if (newTitle) {
-    watchlist[index].title = newTitle;
-    saveWatchlist();
-    renderWatchlist();
-  }
-}
+// function editWatchlist(index) {
+//   const newTitle = prompt("Enter new movie title:", watchlist[index].title);
+//   if (newTitle) {
+//     watchlist[index].title = newTitle;
+//     saveWatchlist();
+//     renderWatchlist();
+//   }
+// }
 
-// ✅ Delete movie from watchlist
 function deleteFromWatchlist(index) {
   if (confirm("Remove this movie from watchlist?")) {
     watchlist.splice(index, 1);
@@ -141,10 +134,9 @@ function deleteFromWatchlist(index) {
   }
 }
 
-// ✅ Save watchlist to localStorage
+
 function saveWatchlist() {
   localStorage.setItem("watchlist", JSON.stringify(watchlist));
 }
 
-// ✅ Initial render when page loads
 renderWatchlist();

@@ -36,6 +36,7 @@ main {
   /*to avoid overlapping the fixed header */
   padding-bottom: 70px;
   /* To avoid overlapping the fixed footer */
+  height: 100%;
 }
 
 #search-input {
@@ -63,6 +64,12 @@ button {
   border: none;
   color: white;
   border-radius: 7px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: green;
 }
 
 #movie-grid {
@@ -132,7 +139,14 @@ button {
 #movie-list {
   width: 800px;
   margin: auto;
+  padding: 20px;
 }
+
+/* span {
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  font-size: 1.4rem;
+} */
 
 footer {
   position: fixed;
