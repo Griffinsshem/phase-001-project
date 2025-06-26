@@ -117,15 +117,6 @@ function renderWatchlist() {
   });
 }
 
-// function editWatchlist(index) {
-//   const newTitle = prompt("Enter new movie title:", watchlist[index].title);
-//   if (newTitle) {
-//     watchlist[index].title = newTitle;
-//     saveWatchlist();
-//     renderWatchlist();
-//   }
-// }
-
 function deleteFromWatchlist(index) {
   if (confirm("Remove this movie from watchlist?")) {
     watchlist.splice(index, 1);

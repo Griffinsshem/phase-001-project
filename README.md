@@ -101,9 +101,9 @@ Get Movie Details:
 
 To run the project locally:
 
-    Clone or download this repository.
+    - Clone or download this repository.
 
-    Ensure files are structured like this:
+    - Ensure files are structured like this:
 
 ```
 project-folder/
@@ -114,11 +114,11 @@ project-folder/
 │   └── script.js
 ```
 
-    Open ```index.html``` in any modern browser.
+    - Open index.html in any modern browser.
 
 ## Future Enhancements
 
-    - Add "Edit Watchlist" functionality (commented in code).
+    - Add "Edit Watchlist" functionality.
 
     - Allow export/import of watchlist.
 
@@ -140,4 +140,9 @@ This project is licensed under the MIT License.
 ## Acknowledgements
 
     - YTS.mx API for providing free movie data.
+
+## Author
+
+ Name: Griffins Ondeyo
+ GitHub: @Griffinsshem
 
