@@ -144,5 +144,5 @@ This project is licensed under the MIT License.
 ## Author
 
  Name: Griffins Ondeyo
- GitHub: @Griffinsshem
 
+ GitHub: @Griffinsshem
