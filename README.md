@@ -77,15 +77,15 @@ project-root/
 
     - Watchlist is displayed below and persists on page reload.
 
-🧪 Example API Endpoints Used
+## Example API Endpoints Used
 
     Search Movies:
 
-https://yts.mx/api/v2/list_movies.json?query_term=batman
+   - https://yts.mx/api/v2/list_movies.json?query_term=batman
 
-Get Movie Details:
+## Get Movie Details:
 
-    https://yts.mx/api/v2/movie_details.json?movie_id=12345
+   - https://yts.mx/api/v2/movie_details.json?movie_id=12345
 
 ## Key JavaScript Functions
 
